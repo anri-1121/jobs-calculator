@@ -1,0 +1,52 @@
+@import url("//cdn.web-fonts.ge/fonts/bpg-banner-extrasquare-caps/css/bpg-banner-extrasquare-caps.min.css");
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 20px;
+  width: 100vw;
+  min-height: 100vh;
+  padding: 50px 250px 0 250px;
+  background-color: #ecedf3d8;
+  font-family: "BPG Banner ExtraSquare Caps", sans-serif;
+}
+
+.title_place {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.title {
+  color: #141719de;
+  font-weight: 400;
+  font-size: 25px;
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+  background-image: url("./resources/logo.png");
+  background-position: center;
+  background-size: cover;
+  filter: grayscale(20%);
+}
+
+
+@media (max-width: 650px) {
+  .App {
+    padding: 10px 10px 0 10px;
+    gap: 10px;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+  
+  .logo {
+    width: 50px;
+    height: 50px;
+  }
+}

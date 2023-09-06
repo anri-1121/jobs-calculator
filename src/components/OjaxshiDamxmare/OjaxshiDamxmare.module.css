@@ -1,0 +1,53 @@
+.schedule_of_the_day {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+  
+  .child_age {
+    display: flex;
+    gap: 3px;
+    flex-direction: column;
+  }
+  
+  .options {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    color: #141719;
+    border: 1px solid rgb(216, 219, 245);
+  }
+  
+  .options:focus {
+    outline: none;
+    border: 1.5px solid rgb(104, 112, 181);
+  }
+  
+  /* Dgeebis asarchevi inputi */
+  .daysInput {
+    flex-direction: column;
+    gap: 3px;
+  }
+  
+  .daysInput .questions {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+  
+  [type="number"] {
+    pointer-events: none;
+  }
+  
+  ::-webkit-inner-spin-button {
+    pointer-events: auto;
+    opacity: 1;
+  }
+  
+  /* fallback for firefox: */
+  @supports (-moz-appearance: textfield) {
+    [type="number"] {
+      pointer-events: unset;
+    }
+  }
+  

@@ -1,0 +1,141 @@
+.main_container {
+  display: flex;
+  width: 100%;
+  min-height: 450px;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: #ffffff;
+  padding: 35px 30px 30px 30px;
+  font-size: 15px;
+}
+
+.main_form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  flex: 1;
+}
+
+.result_container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  background-color: #eff0f5;
+  color: #111;
+  margin: 0px 0px 0px 20px;
+  border-radius: 1.5rem;
+  border: none;
+}
+
+.main_options_container {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.options {
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+  color: #141719;
+  border: 1px solid rgb(216, 219, 245);
+  border-radius: 0.3rem;
+}
+
+.options:focus {
+  outline: none;
+  border: 1.5px solid rgb(59, 78, 244);
+}
+
+.listOfPeople {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.button_container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.order {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 230px;
+  padding: 8px 10px;
+  border-radius: 0.5rem;
+  background-color: #0404cf;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  transition: 0.3s all ease;
+  letter-spacing: 1px;
+  opacity: 0.7;
+  cursor: pointer;
+  border: none;
+}
+
+.order img {
+  width: 15px;
+  height: 15px;
+}
+
+.order_2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 230px;
+  padding: 8px 10px;
+  border-radius: 0.5rem;
+  background-color: rgb(13, 119, 13);
+  color: #fff;
+  font-weight: bold;
+  font-size: 15px;
+  transition: 0.3s all ease;
+  opacity: 0.8;
+  cursor: pointer;
+  border: none;
+  letter-spacing: 1px;
+}
+
+.order_2 img {
+  width: 15px;
+  height: 15px;
+}
+
+.order:hover,
+.order_2:hover {
+  opacity: 1;
+  gap: 5px;
+}
+
+.languageSelect {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+@media (max-width: 650px) {
+  .main_container {
+    flex-direction: column;
+  }
+
+  .result_container {
+    padding: 10px 5px 10px 5px;
+    border-radius: 0.5rem;
+    margin: 20px 0 0 0;
+  }
+
+  .result_container h2 {
+    font-size: 17px;
+  }
+}
