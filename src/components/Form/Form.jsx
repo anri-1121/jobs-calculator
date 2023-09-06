@@ -14,7 +14,7 @@ import { JobContext } from "../../context/JobContext";
 import rightArrow from '../../resources/right_arrow.png';
 
 const Form = () => {
-  const { handleJobs, jobs, activeSchedule, finalCompensation, hourCompensation, workDaysInMonth, handleMultiLingual } =
+  const { handleJobs, jobs, activeSchedule, finalCompensation, hourCompensation, workDaysInMonth, handleMultiLingual, multiLingualPrice } =
     useContext(JobContext);
 
   const handleChange = (e) => {
@@ -114,7 +114,7 @@ const Form = () => {
             </div> 
             : 
             <>
-              <h2>ანაზღაურება თვეში = {finalCompensation}₾</h2>
+              <h2>ანაზღაურება თვეში = {finalCompensation + multiLingualPrice}₾</h2>
               <h2>
                 {workDaysInMonth} სამუშაო {keyWorkForActiveSchedule(activeSchedule)}
                 /თვეში
@@ -127,21 +127,21 @@ const Form = () => {
           }
           <div className={styles.button_container}>
             <a href="https://hrbaia.com/ge/pages/jobsV/" target="_">
-              <button className={styles.order}>იპოვე სამსახური<img src={rightArrow} alt="" /></button>
+              <button className={styles.order}>იპოვეთ სამსახური<img src={rightArrow} alt="" /></button>
             </a>
             <a href="https://hrbaia.com/ge/personali/person" target="_">
-              <button className={styles.order_2}>შეუკვეთე პერსონალი<img src={rightArrow} alt="" /></button>
+              <button className={styles.order_2}>იპოვეთ პერსონალი<img src={rightArrow} alt="" /></button>
             </a>
           </div>
         </div>
         <div style={activeSchedule === "hourly" ? {display:'flex', flexDirection:"column", alignItems:"center", gap:"20px"} : {display:"none"}}>
-          <h2>ანაზღაურება საათში = {finalCompensation * hourCompensation}₾</h2>
+          <h2>ანაზღაურება საათში = {finalCompensation * hourCompensation + multiLingualPrice}₾</h2>
           <div className={styles.button_container}>
             <a href="https://hrbaia.com/ge/pages/jobsV/" target="_">
-              <button className={styles.order}>იპოვე სამსახური<img src={rightArrow} alt="" /></button>
+              <button className={styles.order}>იპოვეთ სამსახური<img src={rightArrow} alt="" /></button>
             </a>
             <a href="https://hrbaia.com/ge/personali/person" target="_">
-              <button className={styles.order_2}>შეუკვეთე პერსონალი<img src={rightArrow} alt="" /></button>
+              <button className={styles.order_2}>იპოვეთ პერსონალი<img src={rightArrow} alt="" /></button>
             </a>
           </div>
         </div>

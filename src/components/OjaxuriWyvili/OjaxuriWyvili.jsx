@@ -34,7 +34,6 @@ const OjaxuriWyvili = () => {
           <option value="dayAndNight">სადღეღამისო</option>
         </select>
       </div>
-      {/*qreba roca ganrigi aris dgiuri saatobrivi an ertjeradi */}
       <div className={styles.child_age}>
         <label>ოჯახური წყვილები სოფლად</label>
         <select name="childAges" id="childAges" className={styles.options} onChange={(e) => handleActiveChildAges(e.target.value)}>

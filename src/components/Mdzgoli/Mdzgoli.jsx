@@ -57,12 +57,45 @@ const Mdzgoli = () => {
       {/* Dgis ganrigi */}
       <div style={activeSchedule === "day" ? {display: "flex"} : {display:"none"}} className={styles.daysInput}>
         <label>კვირაში რამდენი სამუშაო დღე?</label>  
-        <input type="number" id="days" min="1" max="6" className={styles.options} placeholder="მაქსიმუმ 6 დღე" onChange={(e) => handleNumberOfDays(e.target.value)}/>
+        <select name="workDays" id="workDays" className={styles.options} onChange={(e) => handleNumberOfDays(e.target.value)}>
+          <option value="1">1 დღე</option>
+          <option value="2">2 დღე</option>
+          <option value="3">3 დღე</option>
+          <option value="4">4 დღე</option>
+          <option value="5">5 დღე</option>
+          <option value="6">6 დღე</option>
+        </select>
       </div>
       {/* dgiuri ganrigi */}
       <div style={activeSchedule === "daily" ? {display: "flex"} : {display:"none"}} className={styles.daysInput}>
         <label>რამდენი სამუშაო დღე?</label>  
-        <input type="number" id="days" min="1" max="25" className={styles.options} placeholder="მაქსიმუმ 25 დღე" onChange={(e) => handleNumberOfDays(e.target.value)}/>
+        <select name="workDays" id="workDays" className={styles.options} onChange={(e) => handleNumberOfDays(e.target.value)}>
+            <option value="1">1 დღე</option>
+            <option value="2">2 დღე</option>
+            <option value="3">3 დღე</option>
+            <option value="4">4 დღე</option>
+            <option value="5">5 დღე</option>
+            <option value="6">6 დღე</option>
+            <option value="7">7 დღე</option>
+            <option value="8">8 დღე</option>
+            <option value="9">9 დღე</option>
+            <option value="10">10 დღე</option>
+            <option value="11">11 დღე</option>
+            <option value="12">12 დღე</option>
+            <option value="13">13 დღე</option>
+            <option value="14">14 დღე</option>
+            <option value="15">15 დღე</option>
+            <option value="16">16 დღე</option>
+            <option value="17">17 დღე</option>
+            <option value="18">18 დღე</option>
+            <option value="19">19 დღე</option>
+            <option value="20">20 დღე</option>
+            <option value="21">21 დღე</option>
+            <option value="22">22 დღე</option>
+            <option value="23">23 დღე</option>
+            <option value="24">24 დღე</option>
+            <option value="25">25 დღე</option>
+          </select>
       </div>
     </div>
   );

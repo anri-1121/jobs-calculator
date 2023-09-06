@@ -66,7 +66,6 @@ const BagisMaswavlebeli = () => {
         </select>
       </div>
       {/* momxmareblis mier archeuli scenarebi⬇️ */}
-      {/* Dgis ganrigi */}
       <div className={styles.daysInput}>
         <label>ბავშვთა ასაკის ჯგუფები</label>  
         <select name="childAges" id="childAges" className={styles.options} onChange={(e) => setChildsGroup(e.target.value)}>

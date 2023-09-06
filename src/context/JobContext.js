@@ -36,7 +36,6 @@ export const JobProvider = ({ children }) => {
     setActiveChildAges("newbornBaby");
     setNumberOfDays("1");
     setMultiLingualPrice(0)
-    
   }
 
   // momxmareblis mier archeuli bavshebis asakis gasagebad
@@ -56,7 +55,7 @@ export const JobProvider = ({ children }) => {
 
   // saboloo fasis dasadgenad
   const CalcCompensation = (fixPrice, profitableCompensation, workDaysInMonth) => {
-    setFinalCompensation(fixPrice + profitableCompensation + (workDaysInMonth * extraTimeMoney) + multiLingualPrice);
+    setFinalCompensation(fixPrice + profitableCompensation + (workDaysInMonth * extraTimeMoney));
     setWorkDaysInMonth(workDaysInMonth)
   }
   
@@ -81,7 +80,7 @@ export const JobProvider = ({ children }) => {
   } 
 
   return (
-    <JobContext.Provider value={{ handleJobs, jobs, activeSchedule, handleActiveSchedule, handleActiveChildAges, activeChildAges, handleNumberOfDays, numberOfDays, handleFromClock, fromClock, handleEndClock, endClock, CalcCompensation, finalCompensation, handleHourCompensation, hourCompensation, handleExtraTimeMoney, workDaysInMonth, handleMultiLingual }}>
+    <JobContext.Provider value={{ handleJobs, jobs, activeSchedule, handleActiveSchedule, handleActiveChildAges, activeChildAges, handleNumberOfDays, numberOfDays, handleFromClock, fromClock, handleEndClock, endClock, CalcCompensation, finalCompensation, handleHourCompensation, hourCompensation, handleExtraTimeMoney, workDaysInMonth, handleMultiLingual, multiLingualPrice }}>
       {children}
     </JobContext.Provider>
   );
