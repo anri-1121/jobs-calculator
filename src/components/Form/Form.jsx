@@ -96,7 +96,7 @@ const Form = () => {
         {/* Enebis asarchevi selecti */}
         <div className={styles.languageSelect}>
           <label>სასაუბრო ენები</label>
-          <select name="language" id="language" className={styles.options} onClick={(e) => handleMultiLingual(e.target.value)}>
+          <select name="language" id="language" className={styles.options} onChange={(e) => handleMultiLingual(e.target.value)}>
             <option value={0}>ქართული</option>
             <option value={100}>უცხოენოვანი</option>
           </select>
