@@ -135,7 +135,7 @@ const Form = () => {
           </div>
         </div>
         <div style={activeSchedule === "hourly" ? {display:'flex', flexDirection:"column", alignItems:"center", gap:"20px"} : {display:"none"}}>
-          <h2>ანაზღაურება საათში ≈ {finalCompensation * hourCompensation}₾</h2>
+          <h2>ანაზღაურება ≈ {finalCompensation * hourCompensation}₾</h2>
           <div className={styles.button_container}>
             <a href="https://hrbaia.com/ge/pages/jobsV/" target="_">
               <button className={styles.order}>იპოვეთ სამსახური<img src={rightArrow} alt="" /></button>

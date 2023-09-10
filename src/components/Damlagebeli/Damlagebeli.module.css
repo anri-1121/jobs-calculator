@@ -41,19 +41,20 @@
 }
 
 .daysInput3::after {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.3rem;
   content: "საათობრივში მოიაზრება ერთჯერადი საათობრივი გრაფიკი და იგი ყოველთვის განსხვავდება დღისა თუ ღამის ნებისმიერი სხვა სტანდარტული ტარიფებისაგან.";
-  filter: brightness(.6);
-  margin-top: 2px;
+  filter: brightness(0.6);
+  margin-top: 3px;
   padding: 5px 2px 5px 3px;
   color: #fff;
   width: 100%;
-  font-weight: bold;
   background-color: #4a4bda;
-  font-size: 14.5px;
+  font-size: 14px;
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: .5s all ease;
+  transition: 0.5s all ease;
 }
 
 .daysInput2 {
@@ -66,19 +67,20 @@
 }
 
 .daysInput2::after {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.3rem;
   content: "დღიურ გრაფიკში მოიაზრება ერთჯერადი სამუშაო და იგი ყოველთვის განსხვავდება დღისა თუ ღამის ნებისმიერი სხვა სტანდარტული ტარიფებისაგან.";
-  margin-top: 2px;
-  filter: brightness(.6);
+  margin-top: 3px;
+  filter: brightness(0.7);
   padding: 5px 2px 5px 3px;
   color: #fff;
   width: 100%;
-  font-weight: bold;
   background-color: #4a4bda;
   font-size: 14px;
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: .5s all ease;
+  transition: 0.5s all ease;
 }
 
 @media (max-width: 650px) {
