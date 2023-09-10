@@ -125,7 +125,7 @@ const AvadmyofisMomvleli = () => {
         </select> 
       </div>
       {/* dgiuri ganrigi */}
-      <div style={activeSchedule === "daily" ? {display: "flex"} : {display:"none"}} className={styles.daysInput}>
+      <div style={activeSchedule === "daily" ? {display: "flex"} : {display:"none"}} className={styles.daysInput2}>
         <label>რამდენი სამუშაო დღე?</label>  
         <select name="workDays" id="workDays" className={styles.options} onChange={(e) => handleNumberOfDays(e.target.value)}>
             <option value="1">1 დღე</option>
@@ -156,7 +156,7 @@ const AvadmyofisMomvleli = () => {
           </select>
       </div>
       {/* saatobrivi ganrigi */}
-      <div style={activeSchedule === "hourly" ? {display: "flex"} : {display:"none"}} className={styles.daysInput}>
+      <div style={activeSchedule === "hourly" ? {display: "flex"} : {display:"none"}} className={styles.daysInput3}>
         <label>რამდენი სამუშაო საათი?</label> 
         <select name="workDays" id="workDays" className={styles.options} onChange={(e) => handleHourCompensation(e.target.value)}>
             <option value="1">1 სთ</option>

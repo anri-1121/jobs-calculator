@@ -60,8 +60,7 @@ const OjaxshiDamxmare = () => {
         <UserTime/>
       </div>
       {/* User Input Clocks Place End */}
-
-      <div>
+      <div className={styles.daysInput}>
         <label>ფართობის მოცულობა</label>
         <select name="childAges" id="childAges" className={styles.options} onChange={(e) => handleActiveChildAges(e.target.value)}>
           <option value="newbornBaby">100 კვ.მ-მდე</option>
@@ -111,7 +110,7 @@ const OjaxshiDamxmare = () => {
         </select>
       </div>
       {/* dgiuri ganrigi */}
-      <div style={activeSchedule === "daily" ? {display: "flex"} : {display:"none"}} className={styles.daysInput}>
+      <div style={activeSchedule === "daily" ? {display: "flex"} : {display:"none"}} className={styles.daysInput2}>
         <label>რამდენი სამუშაო დღე?</label> 
         <select name="workDays" id="workDays" className={styles.options} onChange={(e) => handleNumberOfDays(e.target.value)}>
             <option value="1">1 დღე</option>
@@ -142,7 +141,7 @@ const OjaxshiDamxmare = () => {
           </select> 
       </div>
       {/* saatobrivi ganrigi */}
-      <div style={activeSchedule === "hourly" ? {display: "flex"} : {display:"none"}} className={styles.daysInput}>
+      <div style={activeSchedule === "hourly" ? {display: "flex"} : {display:"none"}} className={styles.daysInput3}>
         <label>რამდენი სამუშაო საათი?</label> 
         <select name="workDays" id="workDays" className={styles.options} onChange={(e) => handleHourCompensation(e.target.value)}>
             <option value="1">1 სთ</option>

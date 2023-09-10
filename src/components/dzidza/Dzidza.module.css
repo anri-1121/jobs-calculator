@@ -10,14 +10,13 @@
   flex-direction: column;
 }
 
-
 .options {
   width: 100%;
   padding: 8px;
   font-size: 14px;
   color: #141719;
   border: 1px solid rgb(216, 219, 245);
-  border-radius: .3rem;
+  border-radius: 0.3rem;
 }
 
 .options:focus {
@@ -27,28 +26,69 @@
 
 /* Dgeebis asarchevi inputi */
 .daysInput {
-  flex-direction: column;
-  gap: 3px;
-}
-
-.daysInput .questions {
   display: flex;
   flex-direction: column;
   gap: 3px;
 }
 
-[type="number"] {
-  pointer-events: none;
+.daysInput3 {
+  flex-direction: column;
+  gap: 3px;
 }
 
-::-webkit-inner-spin-button {
-  pointer-events: auto;
-  opacity: 1;
+.daysInput3:hover::after {
+  filter: brightness(1);
 }
 
-/* fallback for firefox: */
-@supports (-moz-appearance: textfield) {
-  [type="number"] {
-    pointer-events: unset;
+.daysInput3::after {
+  content: "საათობრივში მოიაზრება ერთჯერადი საათობრივი გრაფიკი და იგი ყოველთვის განსხვავდება დღისა თუ ღამის ნებისმიერი სხვა სტანდარტული ტარიფებისაგან.";
+  filter: brightness(.6);
+  margin-top: 2px;
+  padding: 5px 2px 5px 3px;
+  color: #fff;
+  width: 100%;
+  font-weight: bold;
+  background-color: #4a4bda;
+  font-size: 14.5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .5s all ease;
+}
+
+.daysInput2 {
+  flex-direction: column;
+  gap: 3px;
+}
+
+.daysInput2:hover::after {
+  filter: brightness(1);
+}
+
+.daysInput2::after {
+  content: "დღიურ გრაფიკში მოიაზრება ერთჯერადი სამუშაო და იგი ყოველთვის განსხვავდება დღისა თუ ღამის ნებისმიერი სხვა სტანდარტული ტარიფებისაგან.";
+  margin-top: 2px;
+  filter: brightness(.6);
+  padding: 5px 2px 5px 3px;
+  color: #fff;
+  width: 100%;
+  font-weight: bold;
+  background-color: #4a4bda;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .5s all ease;
+}
+
+@media (max-width: 650px) {
+  .daysInput2::after {
+    filter: brightness(1);
+    padding: 5px 0;
+  }
+
+  .daysInput3::after {
+    filter: brightness(1);
+    padding: 5px 0;
   }
 }

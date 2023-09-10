@@ -100,7 +100,7 @@ const Damlagebeli = () => {
         </select>
       </div>
       {/* dgiuri ganrigi */}
-      <div style={activeSchedule === "daily" ? {display: "flex"} : {display:"none"}} className={styles.daysInput}>
+      <div style={activeSchedule === "daily" ? {display: "flex"} : {display:"none"}} className={styles.daysInput2}>
         <label>რამდენი სამუშაო დღე?</label>  
         <select name="workDays" id="workDays" className={styles.options} onChange={(e) => handleNumberOfDays(e.target.value)}>
             <option value="1">1 დღე</option>

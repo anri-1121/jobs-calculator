@@ -97,8 +97,8 @@ const Form = () => {
         <div className={styles.languageSelect}>
           <label>სასაუბრო ენები</label>
           <select name="language" id="language" className={styles.options} onClick={(e) => handleMultiLingual(e.target.value)}>
-            <option value="qartuli">ქართული</option>
-            <option value="multiLingual">უცხოენოვანი</option>
+            <option value={0}>ქართული</option>
+            <option value={100}>უცხოენოვანი</option>
           </select>
         </div>
       </div>
@@ -114,7 +114,7 @@ const Form = () => {
             </div> 
             : 
             <>
-              <h2>ანაზღაურება თვეში = {finalCompensation + multiLingualPrice}₾</h2>
+              <h2>ანაზღაურება თვეში ≈ {finalCompensation}₾</h2>
               <h2>
                 {workDaysInMonth} სამუშაო {keyWorkForActiveSchedule(activeSchedule)}
                 /თვეში
@@ -135,7 +135,7 @@ const Form = () => {
           </div>
         </div>
         <div style={activeSchedule === "hourly" ? {display:'flex', flexDirection:"column", alignItems:"center", gap:"20px"} : {display:"none"}}>
-          <h2>ანაზღაურება საათში = {finalCompensation * hourCompensation + multiLingualPrice}₾</h2>
+          <h2>ანაზღაურება საათში ≈ {finalCompensation * hourCompensation}₾</h2>
           <div className={styles.button_container}>
             <a href="https://hrbaia.com/ge/pages/jobsV/" target="_">
               <button className={styles.order}>იპოვეთ სამსახური<img src={rightArrow} alt="" /></button>

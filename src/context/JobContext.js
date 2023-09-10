@@ -23,7 +23,7 @@ export const JobProvider = ({ children }) => {
     setFromClock("");
     setEndClock("");
     setHourCompensation(1)
-    setMultiLingualPrice(0)
+    // setMultiLingualPrice(0)
   };
 
   // zedmeti saatebis anazgaureba
@@ -35,7 +35,7 @@ export const JobProvider = ({ children }) => {
     setActiveSchedule(selectedSchedule);
     setActiveChildAges("newbornBaby");
     setNumberOfDays("1");
-    setMultiLingualPrice(0)
+    // setMultiLingualPrice(0)
   }
 
   // momxmareblis mier archeuli bavshebis asakis gasagebad
@@ -55,7 +55,12 @@ export const JobProvider = ({ children }) => {
 
   // saboloo fasis dasadgenad
   const CalcCompensation = (fixPrice, profitableCompensation, workDaysInMonth) => {
-    setFinalCompensation(fixPrice + profitableCompensation + (workDaysInMonth * extraTimeMoney));
+    if(activeSchedule !== "hourly"){
+      setFinalCompensation(fixPrice + profitableCompensation + (workDaysInMonth * extraTimeMoney) + multiLingualPrice);
+    }else {
+      let hourLanguagePrice = multiLingualPrice === 100 ? 5 : 0
+      setFinalCompensation(fixPrice + profitableCompensation + (workDaysInMonth * extraTimeMoney) + hourLanguagePrice);
+    }
     setWorkDaysInMonth(workDaysInMonth)
   }
   
@@ -71,12 +76,13 @@ export const JobProvider = ({ children }) => {
 
   // Multi language handler
   const handleMultiLingual = (isMultiLingual) => {
-    if(isMultiLingual === "multiLingual") {
-      setMultiLingualPrice(100);
-    }
-    if(isMultiLingual === "qartuli"){
-      setMultiLingualPrice(0)
-    }
+    // if(isMultiLingual === "multiLingual") {
+    //   setMultiLingualPrice(100);
+    // }
+    // if(isMultiLingual === "qartuli"){
+    //   setMultiLingualPrice(0)
+    // }
+    setMultiLingualPrice(parseInt(isMultiLingual))
   } 
 
   return (

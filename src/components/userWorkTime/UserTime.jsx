@@ -15,7 +15,7 @@ const UserTime = ({ scheduleFixTime }) => {
   var firstClock = fromClock.replace(/:/, ".");
   var secondClock = endClock.replace(/:/, ".");
   var result = Math.round((secondClock - firstClock) * 100) / 100;
-  var [schetuleTimeHours, scheduleTimeMinutes] = result.toString().split(".")
+  var [schetuleTimeHours, scheduleTimeMinutes] = result.toString().split(".");
   
   var scheduleFixTime;
 
@@ -117,7 +117,7 @@ const UserTime = ({ scheduleFixTime }) => {
         {/* <h1>{result} სთ</h1> */}
         {checkIfTimeIsPos(result, scheduleFixTimeHandler())}
         {
-          parseInt(schetuleTimeHours) <= 0 ? <span>თქვენი არჩეული სამუშაო საათები ნულის ტოლი ან ნაკლებია</span> : <span>{schetuleTimeHours} საათიანი გრაფიკი</span>
+          parseInt(schetuleTimeHours) <= 0 ? <span>მოისაზრება {scheduleFixTime} საათიანი გრაფიკი</span> : <span>{schetuleTimeHours} საათიანი გრაფიკი</span>
         }
       </div>
     </>

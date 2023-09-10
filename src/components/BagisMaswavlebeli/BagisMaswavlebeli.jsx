@@ -3,6 +3,7 @@ import { useContext } from "react";
 import { JobContext } from "../../context/JobContext";
 import styles from './BagisMaswavlebeli.module.css';
 import { bagisAgmzrdeli } from "../../data";
+import UserTime from "../userWorkTime/UserTime";
 
 const BagisMaswavlebeli = () => {
   const { activeSchedule, handleActiveSchedule, handleActiveChildAges, activeChildAges, handleNumberOfDays, numberOfDays, CalcCompensation } = useContext(JobContext);
@@ -57,6 +58,11 @@ const BagisMaswavlebeli = () => {
           <option value="day">დღის გრაფიკი</option>
         </select>
       </div>
+      {/* User Input Clocks Place */}
+      <div style={activeSchedule === "day" ? {display: "flex"} : {display:"none"}}>
+        <UserTime/>
+      </div>
+      {/* User Input Clocks Place End */}
       {/*qreba roca ganrigi aris dgiuri saatobrivi an ertjeradi */}
       <div className={styles.child_age}>
         <label>ბაღის კანდიდატურა</label>

@@ -47,7 +47,7 @@ const Dzidza = () => {
         case "orzemetibavshvi":
           return CalcCompensation(fixJobsPrice, profitablePrice * 3, workdaysInmonth);
         case "disabilities":
-          return CalcCompensation(fixJobsPrice, profitablePrice * 4, workdaysInmonth);
+          return CalcCompensation(fixJobsPrice, profitablePrice * 3, workdaysInmonth);
         default:
           console.log("childages");
       }
@@ -154,7 +154,7 @@ const Dzidza = () => {
         </select>
       </div>
       {/* dgiuri ganrigi */}
-      <div style={activeSchedule === "daily" ? {display: "flex"} : {display:"none"}} className={styles.daysInput}>
+      <div style={activeSchedule === "daily" ? {display: "flex"} : {display:"none"}} className={styles.daysInput2}>
         <label>რამდენი სამუშაო დღე?</label>  
         <select name="workDays" id="workDays" className={styles.options} onChange={(e) => handleNumberOfDays(e.target.value)}>
             <option value="1">1 დღე</option>
@@ -185,7 +185,7 @@ const Dzidza = () => {
           </select>
       </div>
       {/* saatobrivi ganrigi */}
-      <div style={activeSchedule === "hourly" ? {display: "flex"} : {display:"none"}} className={styles.daysInput}>
+      <div style={activeSchedule === "hourly" ? {display: "flex"} : {display:"none"}} className={styles.daysInput3}>
         <label>რამდენი სამუშაო საათი?</label>  
         <select name="workDays" id="workDays" className={styles.options} onChange={(e) => handleHourCompensation(e.target.value)}>
             <option value="1">1 სთ</option>
